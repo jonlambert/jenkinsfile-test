@@ -17,6 +17,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'rsync -avz . /opt/toshi'
+                
             }
         }
     }
