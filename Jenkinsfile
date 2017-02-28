@@ -14,12 +14,12 @@ pipeline {
             }
         }
         stage('Deploy') {
+            when {
+                branch 'master'
+            }
             steps {
-                if (env.BRANCH_NAME == "master") {
-                    echo 'Deploying....'
-                    sh 'rsync --exclude ".git" -avz . ~/var/www/toshi'    
-                } else {
-                }     
+                echo 'Deploying....'
+                sh 'rsync --exclude ".git" -avz . ~/var/www/toshi'       
             }
         }
     }
