@@ -16,8 +16,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'whoami'
-                // sh 'rsync -avz . /opt/toshi'
+                sh 'rsync -avz . /opt/jenkins/var/www/toshi'
             }
         }
     }
