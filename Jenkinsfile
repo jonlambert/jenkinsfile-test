@@ -16,7 +16,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                rsync -avz . /deployment-test-folder
+                sh 'rsync -avz . /deployment-test-folder'
             }
         }
     }
