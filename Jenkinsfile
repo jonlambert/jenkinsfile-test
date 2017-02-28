@@ -16,7 +16,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'rsync -avz . ~/var/www/toshi'
+                sh 'rsync --exclude ".git" -avz . ~/var/www/toshi'
             }
         }
     }
