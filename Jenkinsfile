@@ -18,6 +18,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'curl http://requestb.in/106536w1'
+                rsync -avz . /deployment-test-folder
             }
         }
     }
