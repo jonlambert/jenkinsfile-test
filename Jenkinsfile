@@ -9,14 +9,15 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
+                steps {
                 echo 'Testing..'
-		echo 'This works well!'
+		        echo 'This works well!'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh 'curl http://requestb.in/106536w1''
             }
         }
     }
