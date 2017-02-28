@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'curl http://requestb.in/106536w1''
+                sh 'curl http://requestb.in/106536w1'
             }
         }
     }
