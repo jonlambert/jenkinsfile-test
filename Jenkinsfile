@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             steps {
@@ -11,13 +10,12 @@ pipeline {
         stage('Test') {
                 steps {
                 echo 'Testing..'
-		        echo 'This works well!'
+		        echo 'This works well'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'curl http://requestb.in/106536w1'
                 rsync -avz . /deployment-test-folder
             }
         }
